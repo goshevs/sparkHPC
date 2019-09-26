@@ -20,7 +20,7 @@ module load python
 ## Directory for configuration files
 export SPARK_CONF_DIR=
 
-## Directory where spark will write temporaty files
+## Directory where spark will write temporary files
 ## !!! IF WORKING WITH SENSITIVE DATA, POINT TO A DESIGNATED DIRECTORY !!!
 ## !!! CONSULT WITH THE SIGNEE OF THE DUA/DMP !!!
 export SPARK_SCRATCH_DIR=
