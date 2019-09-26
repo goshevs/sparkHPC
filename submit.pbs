@@ -4,7 +4,7 @@
 #PBS -l walltime=12:00:00
 #PBS -o <path to a directory; SEE BELOW IF WORKING WITH SENSITIVE DATA>
 #PBS -e <path to a directory; SEE BELOW IF WORKING WITH SENSITIVE DATA>
-#PBS -d <<add here the path to your spark cluster scripts>
+#PBS -d <add here the path to your spark cluster scripts>
 
 
 ./spark.sh
