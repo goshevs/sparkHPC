@@ -66,7 +66,7 @@ script crashes, the user **MUST** do the following:
 in files `master` and `slaves` in the user selected configuration directory
 
 2. `ssh` to every host and kill the spark processes (user may wish to write
-a custom code to that)
+a custom code that does this)
 
  
 
