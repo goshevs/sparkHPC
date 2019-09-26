@@ -65,8 +65,8 @@ script crashes, the user **MUST** do the following:
 1. Identify the hosts that were part of the cluster. Host names are listed
 in files `master` and `slaves` in the user selected configuration directory
 
-2. `ssh` to every host and kill the spark processes (user may wish to develop a
-script that does this)
+2. `ssh` to every host and kill the spark processes (user may wish to do this 
+with a custom script)
 
  
 
