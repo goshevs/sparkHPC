@@ -10,7 +10,7 @@
 ./spark.sh
 
 ########################################################
-## IF WORING WITH SENSITIVE DATA
+## IF WORKING WITH SENSITIVE DATA
 
 # If you are working with sensitive data, consult with the
 # the signee of the DUI/DMP regarding directories that can 

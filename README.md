@@ -17,12 +17,12 @@ Then submit `submit.pbs` to the job scheduler on the cluster.
 
 Please, note the following:
 
-1. The script that spark will be executing (i.e. your work script) can 
-accept arguments. At this time there is only one argument passed to it and that is 
+1. The script that spark will be executing (i.e. your work script)
+accepts arguments. At this time there is only one argument passed to it and that is 
 the data file you wish to work with (or anything else you wish to pass!). 
 
 2. In the case of working with sensitive data, ensure that all writes to disk 
-in your work script are directed to a permissible directory under the 
+in your work script are directed to a directory permissible under the 
 DUA/DMP. If you are unsure what directories you can write to, contact
 the signee of the DUA/DMP.
 
@@ -48,7 +48,9 @@ for working with sensitive data, if this applies to them.
 ### All other files
 
 All remaning files configure, fire up, pass the work and shut down
-the spark cluster if work has completed successfully.
+the spark cluster if work has completed successfully. **Unless you know 
+what you are doing, please do not edit any of them.**
+
 
 ## POSSIBLE ISSUES
 
