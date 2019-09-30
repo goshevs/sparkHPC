@@ -14,7 +14,7 @@ that this configuration would work well for their problem.
 Download/clone the repo to a directory and edit the `userInput.template.sh` and
 `submit.template.pbs` files. Follow the instructions in each file carefully.
 Save `userInput.template.sh` as `userInput.sh` and (if desired save `submit.template.pbs` as 
-`submit.pbs`) and then submit the PBS script to the job scheduler on the cluster.
+`submit.pbs`). Then submit the PBS script to the job scheduler on the cluster.
 
 Please, note the following:
 
