@@ -10,7 +10,7 @@
 
 
 echo "Setting up environment and defaults"
-source ./EDITME.sh
+source ./userInput.sh
 source $SPARK_SCRIPTS_DIR/config-spark.sh
 source $SPARK_CONF_DIR/spark-env.sh
 

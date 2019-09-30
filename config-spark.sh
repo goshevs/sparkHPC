@@ -13,7 +13,7 @@
 ## Aug 10, 2019
 
 
-source ./EDITME.sh
+source ./userInput.sh
 export JAVA_HOME=/
 echo "export SPARK_HOME=$SPARK_HOME" > $SPARK_CONF_DIR/spark-env.sh
 echo "export SPARK_CONF_DIR=$SPARK_CONF_DIR" >> $SPARK_CONF_DIR/spark-env.sh

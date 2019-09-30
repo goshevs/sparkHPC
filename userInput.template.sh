@@ -25,8 +25,12 @@ export SPARK_CONF_DIR=
 ## !!! CONSULT WITH THE SIGNEE OF THE DUA/DMP !!!
 export SPARK_SCRATCH_DIR=
 
+## Spark master port
+export SPARK_MATER_PORT=
+
 ## This is the location of the Apache Spark installation
 export SPARK_HOME=
+
 
 
 ###############################################################
