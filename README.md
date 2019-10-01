@@ -35,7 +35,7 @@ The scripts in this repo and their descriptions follow below.
 ### `userInput.template.sh`
 
 `userInput.template.sh` defines a set of environment variables needed for configuring
-the spark cluster. This files **MUST** be customized saved by the users as `userInput.sh`. 
+the spark cluster. This files **MUST** be customized and saved by the users as `userInput.sh`. 
 If working with sensitive data, users **MUST** ensure that all files (intermediate and 
 final data, log and temp files) are stored in a permissible directory. 
 
