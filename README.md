@@ -70,7 +70,7 @@ If for some reason the setup scripts fail to address the former issue,
 users **MUST** do the following:
 
 1. Identify the hosts that were part of the cluster. Host names are listed
-in files `master` and `slaves` in the user selected configuration directory
+in files `master` and `workers` in the user selected configuration directory
 
 2. `ssh` to every host and kill the spark processes (users may wish to do this 
 with a custom script)
