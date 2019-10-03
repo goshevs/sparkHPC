@@ -24,7 +24,7 @@ the data file users wish to work with (or anything else users wish to pass!).
 
 2. In the case of working with sensitive data, users **MUST** ensure that all 
 writes to disk by the work script are directed to a directory permissible under the 
-DUA/DMP. If uers are unsure what directories they can write to, they should contact
+DUA/DMP. If users are unsure what directories they can write to, they should contact
 the signee of the DUA/DMP.
 
 
