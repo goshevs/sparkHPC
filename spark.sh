@@ -3,6 +3,11 @@
 ## The script configures the environment and defaults for 
 ## spark, launches the spark cluster, submits the work, 
 ## and finally tears down the cluster
+##
+##
+##
+## Simo Goshev
+## Sep 15, 2019
 
 
 ## Get start time
