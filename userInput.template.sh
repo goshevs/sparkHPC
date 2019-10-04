@@ -26,7 +26,7 @@ export SPARK_CONF_DIR=
 export SPARK_SCRATCH_DIR=
 
 ## Spark master port
-export SPARK_MASTER_PORT=
+export SPARK_MASTER_PORT=7077
 
 ## This is the location of the Apache Spark installation
 export SPARK_HOME=
