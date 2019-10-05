@@ -52,7 +52,7 @@ the spark cluster if work has completed successfully. **Unless users know
 what they are doing, they should not edit any of them.**
 
 
-## POSSIBLE ISSUES
+## Common issues
 
 One of the most common issues arises from work not completing due to
 an error. If this happens, it is very likely that some of the spark processes 
