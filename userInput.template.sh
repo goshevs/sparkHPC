@@ -8,14 +8,15 @@
 ## Aug 10, 2019
 
 
+################################################################
+## Load  modules
 
-## Here include modules that you wish to load
-## e.g.: 
 module load python
+module load R
 
 
 ################################################################
-## Define environment variables needed by spark
+## Spark environment variables
 
 ## Directory for configuration files
 export SPARK_CONF_DIR=
@@ -32,20 +33,19 @@ export SPARK_MASTER_PORT=7077
 export SPARK_HOME=
 
 
-
 ###############################################################
-## Define job parameters
+## Job- and log-related variables
 
-## This is the location of the cluster setup scripts
+## Cluster setup scripts directory
 export SPARK_SCRIPTS_DIR=
 
-## This is the location and name of the script you will be running
+## Location and name of the work script to be executed
 export MY_SPARK_JOBSCRIPT=
 
-## This is the name of the dataset you are using
+## OPTIONAL: Location and name of dataset (if argument to work script)
 export MY_SPARK_DATASET=
 
-## This is the location where you want your spark log file to be created
+## Location and name of spark log file
 ## !!! IF WORKING WITH SENSITIVE DATA, POINT TO A DESIGNATED DIRECTORY !!!
 ## !!! CONSULT WITH THE SIGNEE OF THE DUA/DMP !!!
 export MY_SPARK_LOGFILE=
