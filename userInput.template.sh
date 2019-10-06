@@ -21,7 +21,7 @@ module load R
 ## Directory for configuration files
 export SPARK_CONF_DIR=
 
-## Directory where spark will write temporary files
+## Directory for spark temporary files
 ## !!! IF WORKING WITH SENSITIVE DATA, POINT TO A DESIGNATED DIRECTORY !!!
 ## !!! CONSULT WITH THE SIGNEE OF THE DUA/DMP !!!
 export SPARK_SCRATCH_DIR=
@@ -29,7 +29,7 @@ export SPARK_SCRATCH_DIR=
 ## Spark master port
 export SPARK_MASTER_PORT=7077
 
-## This is the location of the Apache Spark installation
+## Apache Spark installation directory
 export SPARK_HOME=
 
 
