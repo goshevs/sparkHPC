@@ -3,11 +3,11 @@
 
 ## Introduction
 
-This repo offers a set of template scripts whose goal is to simplify
-running Apache Spark clusters on HPC infrastructure with PBS as a job scheduler. 
+This repo offers a set of barebones scripts that simplify
+running Apache Spark clusters on HPC infrastructure with a PBS job scheduler. 
 It is important to note that the spark configuration that these
-scripts set out is customized to serve a specific task. Users should not expect
-that this configuration would work well for their problem.
+scripts set up is customized to a specific task. Users should not expect
+that this configuration would work well with their data.
 
 ## How to use
 
@@ -48,8 +48,9 @@ for working with sensitive data, if this applies to them.
 ### All other files
 
 All remaning files configure, fire up, pass the work and shut down
-the spark cluster if work has completed successfully. **Unless users know 
-what they are doing, they should not edit any of them.**
+the spark cluster if work has completed successfully. 
+
+**Unless users know what they are doing, they should not edit them.**
 
 
 ## Common issues
