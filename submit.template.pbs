@@ -3,9 +3,8 @@
 #PBS -l nodes=3:Intel14:ppn=28,mem=125gb
 #PBS -l walltime=12:00:00
 #PBS -S /bin/bash
-#PBS -o <path to a directory & file; SEE BELOW IF WORKING WITH SENSITIVE DATA>
-#PBS -e <path to a directory & file; SEE BELOW IF WORKING WITH SENSITIVE DATA>
-#PBS -d <add here the path to your spark cluster scripts>
+#PBS -j oe -o </path/to/file; SEE BELOW IF WORKING WITH SENSITIVE DATA>
+#PBS -d </path/to/spark/scripts>
 
 
 ./spark.sh
