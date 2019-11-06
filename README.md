@@ -45,12 +45,16 @@ they appear above.
 ## Integration with MariaDB
 
 Integration with MariaDB is provided via variables in `userConfiguration.template.sh`
-that begin with `MDB`. If users choose to pass all relevant db information to their 
-work script in the form of arguments, they should use:
+that begin with `MDB` and variable `SPARK_CLASS_PATH`. 
+
+If users choose to pass all relevant db information to their work script as arguments, 
+they should use:
 
 - All `MDB_*` variables, in the case of running a distributed MariaDB instance  
 - Variables `MDB_CONF_DIR`, `MDB_MASTER_NODE`, `MDB_USER_CREDENTIALS` and 
 `MDB_DATABASE_NAME`, in the case of running a non-distributed MariaDB instance.
+
+Variable `SPARK_CLASS_PATH` has to point to the location of the MariaDB Java Connector.
 
 Repo [sparkDBUtilities](https://github.com/goshevs/sparkDBUtilities)
 contains utilities that facilitate pushing Spark RDD's to MariaDB
