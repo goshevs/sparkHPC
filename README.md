@@ -20,7 +20,7 @@ and final data, log and temp files, etc.) are made in a permissible directory
 as defined in their DUA/DMP.
 
 Users may wish to customize `config-spark.sh` to ensure that the Spark cluster
-configuration is matched well to the resources allocated to the job and user's 
+configuration is matched well to the resources allocated to the job and job's 
 computational needs.
 
 
