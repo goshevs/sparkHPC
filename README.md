@@ -49,7 +49,7 @@ that begin with `MDB`. If users choose to pass all relevant db information to th
 work script in the form of arguments, they should use:
 
 - All `MDB_*` variables, in the case of running a distributed MariaDB instance  
-- Variables $MDB_CONF_DIR`, `$MDB_MASTER_NODE`, `$MDB_USER_CREDENTIALS` and 
+- Variables `$MDB_CONF_DIR`, `$MDB_MASTER_NODE`, `$MDB_USER_CREDENTIALS` and 
 `$MDB_DATABASE_NAME`, in the case of running a non-distributed MariaDB instance.
 
 Repo [sparkDBUtilities](https://github.com/goshevs/sparkDBUtilities)
