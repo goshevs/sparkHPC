@@ -28,7 +28,8 @@ if [[ ! -z "$testRunMaster" ]]; then
      kill -9 $testRunMaster
 fi
 ${SPARK_HOME}/sbin/start-master.sh
-export SPARK_MASTER="spark://${nodes[0]}:$SPARK_MASTER_PORT"
+export SPARK_MASTER_NODE=${nodes[0]}
+export SPARK_MASTER="spark://$SPARK_MASTER_NODE:$SPARK_MASTER_PORT"
 
 ## Start the workers
 CLASS="org.apache.spark.deploy.worker.Worker"
@@ -49,5 +50,5 @@ for w in $( seq 0 $last ); do
 done
 
 
-echo "${nodes[0]}" > $SPARK_CONF_DIR/master
-echo "SPARK cluster fired up. Master node is ${nodes[0]}"
+echo "$SPARK_MASTER_NODE" > $SPARK_CONF_DIR/master
+echo "SPARK cluster fired up. Master node is $SPARK_MASTER_NODE"
