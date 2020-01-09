@@ -32,6 +32,9 @@ export SPARK_MASTER_PORT=7077
 ## Apache Spark installation directory
 export SPARK_HOME=
 
+## Should Driver/Master be a separate node (1-True;0-False)?
+export SPARK_MASTER_ISOLATE=1
+
 
 ###############################################################
 ## Job- and log-related variables

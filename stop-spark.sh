@@ -17,7 +17,7 @@ ${SPARK_HOME}/sbin/stop-master.sh
 ## Shut down workers
 CLASS="org.apache.spark.deploy.worker.Worker"
 
-for w in $( seq 0 $last ); do
+for w in $( seq $SPARK_MASTER_ISOLATE $last ); do
     if [ "$SPARK_WORKER_INSTANCES" = "" ]; then
         WORKER_NUM=1
         ssh ${nodes[$w]} "${SPARK_HOME}/sbin/spark-daemon.sh --config $SPARK_CONF_DIR stop $CLASS $WORKER_NUM"

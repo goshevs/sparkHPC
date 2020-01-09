@@ -15,11 +15,10 @@ if [ $nnodes -lt 2 ]; then
     >&2 echo "WARN: You are running one node only"
 fi
 
+## Remove old workers file
 rm -f $SPARK_CONF_DIR/workers
-for i in ${nodes[@]}; do
-    echo "$i" >> $SPARK_CONF_DIR/workers
-done
 
+## Record the pbs jobid
 echo "$PBS_JOBID" > $SPARK_CONF_DIR/jobid
 
 ## Start the master
@@ -34,7 +33,10 @@ export SPARK_MASTER="spark://${nodes[0]}:$SPARK_MASTER_PORT"
 CLASS="org.apache.spark.deploy.worker.Worker"
 testRunWorker="TEST_RUN_WORKER=\$(ps aux | grep \$USER | grep 'spark\.deploy\.worker' | awk '{print \$2}')"
 
-for w in $( seq 0 $last ); do
+for w in $( seq $SPARK_MASTER_ISOLATE $last ); do
+
+    echo "${nodes[$w]}" >> $SPARK_CONF_DIR/workers
+
     if [ "$SPARK_WORKER_INSTANCES" = "" ]; then
         WORKER_NUM=1
         ssh ${nodes[$w]} "$testRunWorker && [[ ! -z "\$TEST_RUN_WORKER" ]] && kill -9 \$TEST_RUN_WORKER"

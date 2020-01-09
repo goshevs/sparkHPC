@@ -30,14 +30,21 @@ echo "export SPARKR_BACKEND_CONNECTION_TIMEOUT=1000000000" >> $SPARK_CONF_DIR/sp
 echo "spark.executor.instances  5" > $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.executor.cores  5" >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.executor.memory  23g" >> $SPARK_CONF_DIR/spark-defaults.conf
-echo "spark.driver.memory 5g" >> $SPARK_CONF_DIR/spark-defaults.conf
+
+if [[ $SPARK_MASTER_ISOLATE eq 0 ]]; then
+	echo "spark.driver.memory 5g" >> $SPARK_CONF_DIR/spark-defaults.conf
+	echo "spark.driver.maxResultSize 4g" >> $SPARK_CONF_DIR/spark-defaults.conf
+else 
+	echo "spark.driver.memory 110g" >> $SPARK_CONF_DIR/spark-defaults.conf
+	echo "spark.driver.maxResultSize 100g" >> $SPARK_CONF_DIR/spark-defaults.conf
+fi
+
 echo "spark.driver.extraJavaOptions  -Djava.io.tmpdir=$SPARK_SCRATCH_DIR" >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.executor.extraJavaOptions  -Djava.io.tmpdir=$SPARK_SCRATCH_DIR" >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.hadoop.dfs.replication  2" >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.files.maxPartitionBytes  10000000000" >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.buffer.pageSize 2m" >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.sql.shuffle.partitions 1000" >> $SPARK_CONF_DIR/spark-defaults.conf
-echo "spark.driver.maxResultSize 4g" >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.executor.memoryOverhead 5g " >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.reducer.maxReqsInFlight 1" >> $SPARK_CONF_DIR/spark-defaults.conf
 echo "spark.shuffle.io.retryWait 1200s" >> $SPARK_CONF_DIR/spark-defaults.conf  
